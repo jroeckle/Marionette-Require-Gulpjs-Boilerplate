@@ -1,0 +1,32 @@
+{
+  "name": "MRB-Lite",
+  "version": "0.0.2",
+  "description": "",
+  "keywords": [
+    "requirejs",
+    "boilerplate",
+    "marionettejs"
+  ],
+  "authors": [
+    "Jason Roeckle"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "public/js/libs",
+    "node_modules"
+  ],
+  "dependencies": {
+    "modernizr": "~2.7.2",
+    "jquery": "~1.11.0",
+    "requirejs": "~2.1.11",
+    "text": "~2.0.10",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.2",
+    "Backbone.validateAll": "*",
+    "marionette": "~1.7.4",
+    "almond": "~0.2.9",
+    "r.js": "~2.1.11",
+    "backbone.eventbinder": "~1.0.2"
+  }
+}
