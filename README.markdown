@@ -19,9 +19,15 @@ A Lightweight boilerplate originally project based off [Marionette-Require-Boile
 
 #TODO
 
-Have Gulp automate assets paths based on enviroment.
+- Automate asset paths with Gulp
 
 ##Change Log
+
+`0.0.2` - July 24, 2014
+
+- Updated bower dependencies (move libraries to UMD format when available)
+- Added Uglifyjs to Gulp builds (not included in Gulp-RJS)
+- Moved images into 'img-src', 'img' now used for builds
 
 `0.0.1` - April 7, 2014
 
