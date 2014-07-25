@@ -7,14 +7,14 @@ require.config({
         "jquery":"../libs/jquery/dist/jquery",
         "underscore":"../libs/lodash/dist/lodash",
         "backbone":"../libs/backbone/backbone",
-        "marionette":"../libs/marionette/lib/core/amd/backbone.marionette",
+        "marionette":"../libs/marionette/lib/core/backbone.marionette",
 
         // Plugins
         "backbone.validateAll":"../libs/Backbone.validateAll/src/javascripts/Backbone.validateAll",
         "text":"../libs/text/text",
-        "backbone.wreqr" : "../libs/backbone.wreqr/lib/amd/backbone.wreqr",
+        "backbone.wreqr" : "../libs/backbone.wreqr/lib/backbone.wreqr",
         "backbone.eventbinder" : "../libs/backbone.eventbinder/lib/amd/backbone.eventbinder",
-        "backbone.babysitter" : "../libs/backbone.babysitter/lib/amd/backbone.babysitter"
+        "backbone.babysitter" : "../libs/backbone.babysitter/lib/backbone.babysitter"
     },
     // Sets the configuration for your third party scripts that are not AMD compatible
     shim:{

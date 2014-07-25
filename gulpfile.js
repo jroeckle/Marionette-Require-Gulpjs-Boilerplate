@@ -1,27 +1,20 @@
-var gulp = require('gulp'),
+var gulp     = require('gulp'),
 	imagemin = require('gulp-imagemin'),
-	jshint = require('gulp-jshint'),
-	concat = require('gulp-concat'),
-	minifyCSS = require('gulp-minify-css'),
-	rjs = require('gulp-requirejs');
+	jshint   = require('gulp-jshint'),
+	concat   = require('gulp-concat'),
+	uglify   = require('gulp-uglify'),
+	pngcrush = require('imagemin-pngcrush'),
+	rjs      = require('gulp-requirejs');
 
-
-//Minify CSS
-gulp.task('minCSS', function() {
-	//start with Normalize and then pull the rest of the stylesheets
-	gulp.src(['./public/css/normalize.min.css','./public/css/*.css'])
-		.pipe(concat('styles.css'))
-		.pipe(minifyCSS({
-			debug : false
-		}))
-		.pipe(gulp.dest('./public/css/app.min.css'));
-});
 
 //Compress Images
 gulp.task('images', function() {
-	gulp.src('public/img/**/*')
-		.pipe(imagemin({optimizationLevel: 5}))
-		.pipe(gulp.dest('public/img/build'));
+	gulp.src('public/img-src/**/*')
+		.pipe(imagemin({
+			progressive       : true,
+			optimizationLevel : 5
+		}))
+		.pipe(gulp.dest('public/img'));
 });
 
 //Lint JS
@@ -33,24 +26,27 @@ gulp.task('lint', function() {
 gulp.task('rjs', function() {
 	//run r.js 
 	rjs({
-		baseUrl: "public/js/app",
-		paths: {
-			"app": "config/Init"
+		baseUrl : "public/js/app",
+		paths   : {
+			"app" : "config/Init"
 		},
+		findNestedDependencies : true,
 		wrap: false,
 		name: "../libs/almond/almond",
 		preserveLicenseComments: false,
-		optimize: "uglify",
+		removeCombined: true,
+		optimize: "uglify2",
 		mainConfigFile: "public/js/app/config/Init.js",
 		include: ["app"],
 		out: "public/js/app/config/Init.min.js"
 	})
-		.pipe(gulp.dest('./'));
+	.pipe(uglify())
+	.pipe(gulp.dest('./'));
 
 });
 
 //run site build
-gulp.task('build', ['rjs', 'images', 'minCSS', 'lint']);
+gulp.task('dist', ['rjs', 'images', 'lint']);
 
 //default for gulp command
-gulp.task('default', ['build']);
+gulp.task('default', ['dist']);

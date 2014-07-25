@@ -2,6 +2,8 @@
 public/js/app/config/Init.min.js
 public/css/app.min.css
 public/js/libs/*
+public/build/img/*
+public/build/img
 public/build/*
 public/build/
 node_modules

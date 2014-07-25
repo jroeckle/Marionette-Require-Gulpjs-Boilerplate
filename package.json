@@ -2,7 +2,7 @@
   "name": "mrgb",
   "title": "Marionette, Require, and Gulp Lite Boilerplate",
   "description": "A Lightweight Marionette.js and Require.js Boilerplate using Gulp.js.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "",
   "author": {
     "name": "Jason Roeckle"
@@ -18,20 +18,23 @@
     }
   ],
   "dependencies": {
-    "express": "3.x",
-    "gulp": "^3.6.0",
-    "gulp-requirejs": "^0.1.3",
-    "gulp-jshint": "^1.5.3"
+    "express": "3.x"
   },
   "main": "./server/server",
   "keywords": [
     "Marionette.js",
     "Backbone.js",
     "Require.js",
+    "Gulp.js",
     "Marionette and Require Boilerplate Lite"
   ],
   "devDependencies": {
-    "gulp-imagemin": "^0.2.0",
+    "gulp": "^3.6.0",
+    "gulp-requirejs": "^0.1.3",
+    "gulp-jshint": "^1.5.3",
+    "gulp-uglify": "^0.3.1",
+    "imagemin-pngcrush": "^0.1.0",
+    "gulp-imagemin": "^0.6.1",
     "gulp-minify-css": "^0.3.0",
     "gulp-concat": "^2.2.0"
   }
