@@ -5,7 +5,7 @@ require.config({
     paths:{
         // Core Libraries
         "jquery":"../libs/jquery/dist/jquery",
-        "underscore":"../libs/lodash/dist/lodash",
+        "underscore":"../libs/lodash/lodash",
         "backbone":"../libs/backbone/backbone",
         "marionette":"../libs/marionette/lib/core/backbone.marionette",
 
