@@ -23,6 +23,12 @@ A Lightweight boilerplate originally project based off [Marionette-Require-Boile
 
 ##Change Log
 
+`0.0.3` - February 18, 2015
+
+- Updated bower dependencies
+   - Officially dropped jQuery v1
+- Added H5BP v5.0.0
+
 `0.0.2` - July 24, 2014
 
 - Updated bower dependencies (move libraries to UMD format when available)
