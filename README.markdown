@@ -23,6 +23,13 @@ A Lightweight boilerplate originally project based off [Marionette-Require-Boile
 
 ##Change Log
 
+`0.0.4` - February 19, 2015
+
+- Removed deprecated MarionetteJS Logic
+   - Removed Application Regions (now a LayoutView)
+   - Removed Application addInitializer calls
+- Housekeeping on LICENSE
+
 `0.0.3` - February 18, 2015
 
 - Updated bower dependencies
