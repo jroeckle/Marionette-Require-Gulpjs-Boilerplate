@@ -1,8 +1,8 @@
 {
-  "name": "mrgb",
+  "name": "MRB-Lite",
   "title": "Marionette, Require, and Gulp Lite Boilerplate",
   "description": "A Lightweight Marionette.js and Require.js Boilerplate using Gulp.js.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "homepage": "",
   "author": {
     "name": "Jason Roeckle"

@@ -1,12 +1,12 @@
-define(['jquery', 'backbone', 'marionette', 'underscore'],
-    function ($, Backbone, Marionette, _) {
+define(['jquery', 'backbone', 'marionette', 'underscore', 'layouts/RootLayoutView'],
+    function ($, Backbone, Marionette, _, RootLayoutView) {
         var App = new Backbone.Marionette.Application();
 
-        //Organize Application into regions corresponding to DOM elements
-        //Regions can contain views, Layouts, or subregions nested as necessary
-        App.addRegions({
-            headerRegion:"header",
-            mainRegion:"#main"
+        App.rootLayout = new RootLayoutView({
+            regions: {
+                headerRegion:"#global-header",
+                mainRegion:"#main"
+            }
         });
 
         function isMobile() {
@@ -18,8 +18,8 @@ define(['jquery', 'backbone', 'marionette', 'underscore'],
 
         App.static.mobile = isMobile();
 
-        App.addInitializer(function (options) {
-            Backbone.history.start();
+        App.on('start', function (options) {
+            if (Backbone.history) Backbone.history.start();
         });
 
         return App;

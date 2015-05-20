@@ -23,10 +23,23 @@ A Lightweight boilerplate originally project based off [Marionette-Require-Boile
 
 ##Change Log
 
-`0.0.25` - May 19, 2015
+`0.0.45` - May 19, 2015
 
 - Updated bower dependencies
 - Updated npm dependencies
+
+`0.0.4` - February 19, 2015
+
+- Removed deprecated MarionetteJS Logic
+   - Removed Application Regions (now a LayoutView)
+   - Removed Application addInitializer calls
+- Housekeeping on LICENSE
+
+`0.0.3` - February 18, 2015
+
+- Updated bower dependencies
+   - Officially dropped jQuery v1
+- Added H5BP v5.0.0
 
 `0.0.2` - July 24, 2014
 
