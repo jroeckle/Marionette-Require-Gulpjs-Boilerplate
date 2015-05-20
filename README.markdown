@@ -23,6 +23,11 @@ A Lightweight boilerplate originally project based off [Marionette-Require-Boile
 
 ##Change Log
 
+`0.0.25` - May 19, 2015
+
+- Updated bower dependencies
+- Updated npm dependencies
+
 `0.0.2` - July 24, 2014
 
 - Updated bower dependencies (move libraries to UMD format when available)
